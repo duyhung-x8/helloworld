@@ -58,4 +58,128 @@ public final class R {
          */
         public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ProgressBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ProgressBar_android_max android:max}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_maxHeight android:maxHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_maxWidth android:maxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_minHeight android:minHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_minWidth android:minWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_progress android:progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_progressDrawable android:progressDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_secondaryProgress android:secondaryProgress}</code></td><td></td></tr>
+           </table>
+           @see #ProgressBar_android_max
+           @see #ProgressBar_android_maxHeight
+           @see #ProgressBar_android_maxWidth
+           @see #ProgressBar_android_minHeight
+           @see #ProgressBar_android_minWidth
+           @see #ProgressBar_android_progress
+           @see #ProgressBar_android_progressDrawable
+           @see #ProgressBar_android_secondaryProgress
+         */
+        public static final int[] ProgressBar = {
+            0x0101011f, 0x01010120, 0x01010136, 0x01010137,
+            0x01010138, 0x0101013c, 0x0101013f, 0x01010140
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#max}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:max
+        */
+        public static final int ProgressBar_android_max = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#maxHeight}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:maxHeight
+        */
+        public static final int ProgressBar_android_maxHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:maxWidth
+        */
+        public static final int ProgressBar_android_maxWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#minHeight}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:minHeight
+        */
+        public static final int ProgressBar_android_minHeight = 7;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#minWidth}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:minWidth
+        */
+        public static final int ProgressBar_android_minWidth = 6;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#progress}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:progress
+        */
+        public static final int ProgressBar_android_progress = 3;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#progressDrawable}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:progressDrawable
+        */
+        public static final int ProgressBar_android_progressDrawable = 5;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#secondaryProgress}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:secondaryProgress
+        */
+        public static final int ProgressBar_android_secondaryProgress = 4;
+        /** Attributes that can be used with a SeekBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SeekBar_android_thumb android:thumb}</code></td><td></td></tr>
+           <tr><td><code>{@link #SeekBar_android_thumbOffset android:thumbOffset}</code></td><td></td></tr>
+           </table>
+           @see #SeekBar_android_thumb
+           @see #SeekBar_android_thumbOffset
+         */
+        public static final int[] SeekBar = {
+            0x01010142, 0x01010143
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#thumb}
+          attribute's value can be found in the {@link #SeekBar} array.
+          @attr name android:thumb
+        */
+        public static final int SeekBar_android_thumb = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#thumbOffset}
+          attribute's value can be found in the {@link #SeekBar} array.
+          @attr name android:thumbOffset
+        */
+        public static final int SeekBar_android_thumbOffset = 1;
+        /** Attributes that can be used with a Theme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Theme_android_disabledAlpha android:disabledAlpha}</code></td><td></td></tr>
+           </table>
+           @see #Theme_android_disabledAlpha
+         */
+        public static final int[] Theme = {
+            0x01010033
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#disabledAlpha}
+          attribute's value can be found in the {@link #Theme} array.
+          @attr name android:disabledAlpha
+        */
+        public static final int Theme_android_disabledAlpha = 0;
+    };
 }
