@@ -9,10 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"      
+        android:layout_centerVertical="true"
+      
         android:layout_marginBottom = "10dp" />
-     
-	<com.helloworld.widget.VerticalSeekBar
+	<!-- <SeekBar
+	    android:layout_below = "@id/VideoView"
+		 android:id="@+id/volbar"
+		 android:layout_width="300dp"
+		  android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+ 		android:layout_height="wrap_content"
+ 		android:layout_centerHorizontal="true"
+ 		android:layout_margin="10px"
+ 		android:rotation="270"
+ 		/> -->
+	<com.helloworld.widget.VerticalSeekBarReverse
 	    android:layout_below = "@id/VideoView"
 		android:id="@+id/volbar"
 	    android:layout_width="wrap_content"

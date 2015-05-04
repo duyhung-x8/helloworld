@@ -1,5 +1,7 @@
 package com.helloworld;
 
+import com.helloworld.widget.VerticalSeekBarReverse;
+
 import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
@@ -10,10 +12,8 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.VideoView;
 
-import com.helloworld.widget.VerticalSeekBar;
-
 public class MainActivity extends Activity {
-	private VerticalSeekBar mVolumeSeekbar = null;
+	private VerticalSeekBarReverse mVolumeSeekbar = null;
 	private AudioManager mAudioManager = null;
 	int mProgressChanged = 0;
 	int mMaxVolume = 1;
@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 
 	private void initControls() {
 		try {
-			mVolumeSeekbar = (VerticalSeekBar) findViewById(R.id.volbar);
+			mVolumeSeekbar = (VerticalSeekBarReverse) findViewById(R.id.volbar);
 			mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 			mAudioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
