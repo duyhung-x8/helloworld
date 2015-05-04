@@ -10,10 +10,10 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.VideoView;
 
-import com.helloworld.widget.VerticalSeekBar;
+import com.helloworld.widget.VerticalSeekbar;
 
 public class MainActivity extends Activity {
-	private VerticalSeekBar mVolumeSeekbar = null;
+	private VerticalSeekbar mVolumeSeekbar = null;
 	private AudioManager mAudioManager = null;
 	int mProgressChanged = 0;
 	int mMaxVolume = 1;
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 		String stringPath = "android.resource://" + getPackageName() + "/"
 				+ R.raw.video;
 		final VideoView videoView = (VideoView) findViewById(R.id.VideoView);
-
+		mVolumeSeekbar = (VerticalSeekbar) findViewById(R.id.volbar);
 		videoView.setVideoPath(stringPath);
 
 		MediaController mediaController = new MediaController(this);
@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
 
 	private void initControls() {
 		try {
-			mVolumeSeekbar = (VerticalSeekBar) findViewById(R.id.volbar);
+			mVolumeSeekbar = (VerticalSeekbar) findViewById(R.id.volbar);
 			mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 			mAudioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
@@ -66,7 +66,6 @@ public class MainActivity extends Activity {
 						@Override
 						public void onProgressChanged(SeekBar arg0,
 								int progress, boolean arg2) {
-							mProgressChanged = progress;
 							mAudioManager.setStreamVolume(
 									AudioManager.STREAM_MUSIC, mProgressChanged, 0);
 						}
@@ -84,20 +83,27 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		switch (keyCode) {
-		case KeyEvent.KEYCODE_VOLUME_UP:
+		case KeyEvent.KEYCODE_VOLUME_UP:	
 			mAudioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 					AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
+			mProgressChanged = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 			// Raise the Volume Bar on the Screen
-			mVolumeSeekbar.setProgress(mAudioManager
-					.getStreamVolume(AudioManager.STREAM_MUSIC));
+			mVolumeSeekbar.setProgress(mProgressChanged);
+			mVolumeSeekbar.setProgressAndThumb(mProgressChanged);
 			return true;
 		case KeyEvent.KEYCODE_VOLUME_DOWN:
+			
 			// Adjust the Volume
 			mAudioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC,
 					AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
+			mProgressChanged = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 			// Lower the VOlume Bar on the Screen
-			mVolumeSeekbar.setProgress(mAudioManager
-					.getStreamVolume(AudioManager.STREAM_MUSIC));
+//			mVolumeSeekbar.setProgress(mAudioManager
+//					.getStreamVolume(AudioManager.STREAM_MUSIC));
+//			mVolumeSeekbar.setProgressAndThumb(mAudioManager
+//					.getStreamVolume(AudioManager.STREAM_MUSIC));
+			mVolumeSeekbar.setProgress(mProgressChanged);
+			mVolumeSeekbar.setProgressAndThumb(mProgressChanged);
 			return true;
 		default:
 			return false;
