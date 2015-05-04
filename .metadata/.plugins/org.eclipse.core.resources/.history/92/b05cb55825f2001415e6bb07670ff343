@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:orientation="vertical"
+ android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ >
+<TextView
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:text="@string/hello_world"
+ />
+<LinearLayout
+ android:orientation="horizontal"
+ android:layout_height="wrap_content"
+ android:layout_width="fill_parent"
+ >
+<Button
+ android:id="@+id/playvideoplayer"
+ android:layout_width="0dip"
+ android:layout_height="wrap_content"
+ android:layout_weight="1"
+ android:text="- PLAY Video -"
+ />
+<Button
+ android:id="@+id/pausevideoplayer"
+ android:layout_width="0dip"
+ android:layout_height="wrap_content"
+ android:layout_weight="1"
+ android:text="- PAUSE Video -"
+ />
+</LinearLayout>
+<SeekBar
+ android:id="@+id/volbar"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:layout_margin="10px"
+ />
+<SurfaceView
+ android:id="@+id/surfaceview"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ />
+</LinearLayout>

@@ -1,0 +1,23 @@
+package com.helloworld;
+
+import java.io.IOException;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.PixelFormat;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.widget.SeekBar;
+
+public class MainActivity extends Activity{
+
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		String stringPath = "android.resource://" + getPackageName() + "/"
+				+ R.raw.video;
+	}
+}
